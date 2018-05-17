@@ -1,9 +1,16 @@
 import React from 'react';
+import Tasks from './Tasks';
 
 export default function (props) {
-  console.log('props', props);
-  const {text} = props.goal;
+  const {
+    text, 
+    tasks
+  } = props.goal;
+
   return (
-    <li>{text}</li>
-  )
+    <div className="w-2/3 mx-auto">
+      <h2 className="mb-4">{text}</h2>
+      <Tasks tasks={tasks} />
+    </div>
+  );
 }

@@ -33,6 +33,7 @@ export function goalsFetchData (url) {
     dispatch(goalsIsLoading(true));
 
     axios.get(`${ROOT_URL}/get/goals${API_KEY}`)
+    // axios.get(`../goals.collection.json`)
       .then(response => {
         if (response.statusText !== 'OK') {
           throw Error(response.statusText)
