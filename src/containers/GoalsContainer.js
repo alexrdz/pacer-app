@@ -8,6 +8,7 @@ function mapStateToProps (state) {
   const { goals, goalsHasErrored, goalsIsLoading} = state;
 
   return {
+    goalsIndex: (goals.length-1),
     goals,
     goalsHasErrored,
     goalsIsLoading
